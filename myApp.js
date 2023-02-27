@@ -1,5 +1,8 @@
 require('dotenv').config();
+const mongoose = require('mongoose')
+const secret = process.env['MONGO_URI'];
 
+mongoose.connect(secret, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let Person;
 
